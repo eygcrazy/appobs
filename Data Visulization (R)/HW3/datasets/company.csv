@@ -1,0 +1,101 @@
+"company","division","office","budget"
+"CompanyB","IT",1,304.235386326683
+"CompanyA","Marketing",1,421.562332033281
+"CompanyC","Accounting",1,518.507563021503
+"CompanyB","Human Resources",1,482.133313924962
+"CompanyA","Marketing",2,530.921983130589
+"CompanyC","IT",1,424.299087307791
+"CompanyA","Finance",1,400.288955870446
+"CompanyB","Accounting",1,434.000005749804
+"CompanyB","Marketing",1,575.937346774883
+"CompanyB","Marketing",2,577.133791829111
+"CompanyA","Marketing",3,331.066458923262
+"CompanyC","Finance",1,511.866600615567
+"CompanyB","Finance",1,389.953699882834
+"CompanyC","Finance",2,554.903384530985
+"CompanyB","Accounting",2,480.991148497931
+"CompanyB","Human Resources",2,541.357714916612
+"CompanyA","Finance",2,762.602919008811
+"CompanyB","Accounting",3,433.954025833161
+"CompanyB","Research",1,560.564583158375
+"CompanyA","Finance",3,472.198156360708
+"CompanyC","Marketing",1,531.589771884048
+"CompanyA","Finance",4,617.273547059696
+"CompanyB","Accounting",4,519.073426364086
+"CompanyA","Accounting",1,353.541192766966
+"CompanyC","Finance",3,552.557942714137
+"CompanyB","Finance",2,568.614751675087
+"CompanyC","IT",2,378.621025729053
+"CompanyB","IT",2,475.537311803125
+"CompanyC","Marketing",2,545.556313261995
+"CompanyC","Accounting",2,486.745667212634
+"CompanyC","Finance",4,388.51575225745
+"CompanyC","Finance",5,558.85331358883
+"CompanyC","Human Resources",1,415.184967441236
+"CompanyA","IT",1,544.95766902011
+"CompanyC","IT",3,247.74202346771
+"CompanyA","Marketing",4,237.737009106708
+"CompanyC","Finance",6,565.809852660347
+"CompanyA","Research",1,316.581838377949
+"CompanyC","Research",1,357.971128063928
+"CompanyC","Research",2,562.056418754183
+"CompanyA","Marketing",5,529.683050615416
+"CompanyA","Marketing",6,536.578209875412
+"CompanyC","IT",4,532.889965987892
+"CompanyC","Finance",7,380.38301517496
+"CompanyC","Marketing",3,444.669653255548
+"CompanyB","Accounting",5,508.334559037134
+"CompanyB","Marketing",3,382.47385773185
+"CompanyA","Human Resources",1,449.579967190501
+"CompanyA","Accounting",2,550.525548444108
+"CompanyB","Finance",3,625.266421480557
+"CompanyB","Marketing",4,714.227027513846
+"CompanyC","Research",3,515.311757366152
+"CompanyC","Accounting",3,592.311461373424
+"CompanyA","Human Resources",2,402.860098941433
+"CompanyB","Research",2,654.011555714407
+"CompanyA","Accounting",3,524.153120078206
+"CompanyA","Research",2,457.51135675039
+"CompanyC","Finance",8,583.827796559876
+"CompanyA","Finance",5,614.713593386435
+"CompanyB","Human Resources",3,408.803326204495
+"CompanyB","Marketing",5,343.432519280587
+"CompanyA","Marketing",7,305.661329079625
+"CompanyB","Finance",4,476.252685936989
+"CompanyC","Accounting",4,411.647460589192
+"CompanyC","Research",4,382.545987370244
+"CompanyB","Human Resources",4,442.39968415932
+"CompanyB","IT",3,549.825506216229
+"CompanyA","Human Resources",3,331.754007256334
+"CompanyC","IT",5,584.328078023652
+"CompanyA","Finance",6,435.792975569681
+"CompanyC","Research",5,466.214253907137
+"CompanyA","Research",3,430.584717451179
+"CompanyC","Accounting",5,504.093935052649
+"CompanyA","Marketing",8,528.058533055913
+"CompanyC","Research",6,631.143885441584
+"CompanyA","IT",2,576.36133395648
+"CompanyC","Human Resources",2,544.88652890766
+"CompanyB","Accounting",6,690.144854192971
+"CompanyA","Marketing",9,421.812559184725
+"CompanyA","Finance",7,552.887016950753
+"CompanyC","Research",7,447.967693678041
+"CompanyC","Human Resources",3,564.280780978249
+"CompanyA","Marketing",10,772.31655101944
+"CompanyC","Finance",9,464.5372854508
+"CompanyA","IT",3,423.837664730846
+"CompanyC","Finance",10,388.067481087127
+"CompanyA","Finance",8,370.087611237334
+"CompanyC","Finance",11,541.175335588233
+"CompanyB","IT",4,367.239015660761
+"CompanyB","IT",5,543.366493764104
+"CompanyC","Accounting",6,496.543450560145
+"CompanyC","Marketing",4,421.914252582147
+"CompanyB","Accounting",7,482.568805008277
+"CompanyA","Research",4,473.052512036468
+"CompanyB","Human Resources",5,364.772726350813
+"CompanyC","Human Resources",4,502.694324302553
+"CompanyB","Finance",5,588.70612926528
+"CompanyC","Accounting",7,424.149415954464
+"CompanyC","Accounting",8,495.150168250565
+"CompanyB","Marketing",6,654.625647345911

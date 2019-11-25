@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+  body
+  {
+    font: 10px sans-serif;
+  }
+
+  .chord path
+  {
+    fill-opacity: .67;
+    stroke: #000;
+    stroke-width: .5px;
+  }
+
+</style>
+<body>
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script>
+
+	var margin = {top: 20, right:20, bottom: 60, left:60 };
+	var w = 600;
+	var h = 400;
+
+  	var dataset;
+	d3.json("GraphData.json", function(error, json)
+	{
+	  if (error) return console.warn(error);
+	  dataset = json;
+	  visualize();
+	});
+
+	function visualize()
+	{
+		// We set a very simple color scheme that doesn't tell us much, but just gives
+		// a different color to each of the nodes (i.e. each node is considered as a
+		// separate category)
+		var colors = d3.scale.category10();
+
+		// Now, we use the d3 force layout.  This layout (like most other layouts) adds
+		// some data to each of the nodes based on its calculations.  It uses two forces
+		// between the nodes
+		//
+		// First each node repels other nodes (kind of like equal electrical charges)
+		//
+		// Second, each edge defines a spring that holds certain nodes together.
+	 	var force = d3.layout.force()
+	  					.nodes(dataset.nodes)
+	  					.links(dataset.edges)
+	  					.size([w, h])
+	  					.linkDistance([50])
+	  					.charge([-100])
+	  					.start();
+
+	  	// Now we set up our svg object as usual
+		var svg = d3.select("body")
+					.append("svg")
+					.attr("width", w + margin.left + margin.right)
+					.attr("height", h + margin.top + margin.bottom)
+					.append("g")
+					.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+		// And for each edge, we add a line (note that the force layout has added data to
+		// the edges too ... data for the positions of the endpoints)
+	  	var edges = svg.selectAll()
+	  					.data(dataset.edges)
+	  					.enter()
+	  					.append("line")
+	  					.style("stroke", "#ccc")
+	  					.style("stroke-width", 1);
+
+	  	// Then we draw the circles for the nodes.  The force layout has told us where the nodes are
+	  	// and so all we have to do is to append a circle for each one.
+	  	//
+	  	// The last attribute ".call(force.drag)" allows us to interact with the nodes with the mouse
+	  	// we can drag a node and that drag is communicated to the "force" layout which then recomputes
+	  	// the layout (triggering a redraw implicitly)
+	  	var nodes = svg.selectAll("circle")
+	  					.data(dataset.nodes)
+	  					.enter()
+	  					.append("circle")
+	  					.attr("r", 10)
+	  					.style("fill", function(d, i)
+	  					{
+	  						return colors(i);
+	  					})
+	  					.call(force.drag);
+
+	  	// Finally, we enable smooth animation by telling the force object what to do when the physics
+	  	// simulation "ticks" or performs one small part of its calculation.  We use the updated data
+	  	// with the updated positions to reset the data for the edges and nodes, triggering a redraw.
+	  	force.on("tick", function() {
+	  		edges.attr("x1", function(d) { return d.source.x; })
+	  			 .attr("y1", function(d) { return d.source.y; })
+	  			 .attr("x2", function(d) { return d.target.x; })
+	  			 .attr("y2", function(d) { return d.target.y; });
+
+	  		nodes.attr("cx", function(d) { return d.x; })
+	  			 .attr("cy", function(d) { return d.y; });
+	  	})
+	}
+
+  </script>
